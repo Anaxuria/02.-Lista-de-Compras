@@ -1,7 +1,7 @@
 main {
     height: 100vh;
     height: 100dvh;
-    overflow: hidden;
+    
 
     max-width: 39.1875rem;
     width: 100%;

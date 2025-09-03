@@ -31,6 +31,7 @@
 body {
     font: var(--paragraph);
     background-color: var(--background-primary);
+    overflow: hidden;
 }
 
 header {

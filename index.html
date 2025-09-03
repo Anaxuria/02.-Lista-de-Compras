@@ -24,22 +24,33 @@
             <h1>Compras da semana</h1>
         </div>
 
-        <div class="input-wrapper">
-            <input class="input" type="text" placeholder="Adicione um novo item">
-            <button>Adicionar Item</button>
-        </div>
+        <form class="input-wrapper">
+            <input class="input" type="text" id="input" placeholder="Adicione um novo item" required>
+            <button type="submit" id="btn">Adicionar Item</button>
+        </form>
 
-        <section class="list">
-            <div class="items">
-                <div class="item">
-                    <input type="checkbox" name="" id="" class="checkbox">
+        <ul class="list" id="list">
+            <li class="item">
+                <div class="content">
+                    <input type="checkbox" name="" class="checkbox">
                     <span>Macarrão</span>
                 </div>
-                <img src="./assets/trash.svg" alt="">
-            </div>
-        </section>
+                <button class="delete">
+                    <img src="./assets/trash.svg" alt="">
+                </button>
+            </li>
+        </ul>
 
-        <div class="error-mensage"></div>
+        <div class="error-mensage">
+            <div class="content">
+                <img src="./assets/warning-circle-filled.svg" alt="" class="icon">
+                <span>O item foi removido da lista</span>
+            </div>
+
+            <img src="./assets/delete-small.svg" alt="">
+        </div>
     </main>
+
+    <script src="./script.js"></script>
 </body>
 </html>
