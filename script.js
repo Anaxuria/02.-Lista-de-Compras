@@ -1,7 +1,9 @@
 const form = document.querySelector("form")
+const li = document.querySelector("li")
 const list = document.querySelector("#list")
 const input = document.querySelector("#input")
 const btn = document.querySelector("#btn")
+const del =document.querySelector(".delete")
 
 form.onsubmit = (event) => {
     event.preventDefault()
@@ -9,9 +11,14 @@ form.onsubmit = (event) => {
     adicionarItem(input.value)
 }
 
+del.onclick = () => {
+    list.removeChild(li)
+    console.log("oi")
+}
+
 function adicionarItem(itemName) {
-    const li = document.createElement("li")
-    li.classList.add("item")
+    const newLi = document.createElement("li")
+    newLi.classList.add("item")
 
     const div = document.createElement("div")
     div.classList.add("content")
@@ -25,20 +32,20 @@ function adicionarItem(itemName) {
 
     div.append(checkbox, span)
 
-    const btn = document.createElement("button")
-    btn.classList.add("delete")
+    const newBtn = document.createElement("button")
+    newBtn.classList.add("delete")
 
     const img = document.createElement("img")
     img.src = "./assets/trash.svg"
     img.alt = "Excluir"
 
-    btn.append(img)
+    newBtn.append(img)
 
 
-    li.appendChild(div)
-    li.appendChild(btn)
+    newLi.appendChild(div)
+    newLi.appendChild(newBtn)
 
-    list.appendChild(li)
+    list.appendChild(newLi)
 
     input.value = ""
 }
