@@ -31,7 +31,7 @@ main {
 
 @media (width <= 45rem) {
     main {
-        max-width: 20.4375rem;
+        max-width: 19.6875rem;
 
         & .input-wrapper{
             display: flex;

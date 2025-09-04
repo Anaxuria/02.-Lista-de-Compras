@@ -18,6 +18,15 @@ h1 {
     font: var(--link);
     padding: .75rem 1rem;
     border-radius: .75rem;
+
+    &:hover {
+        border: 2px solid var(--border-hover);
+    }
+
+    &:focus {
+        border: 2px solid var(--color-brand);
+        color: var(--content-primary);
+    }
 }
 
 #btn {
@@ -34,6 +43,9 @@ h1 {
     border-radius: .75rem 1rem;    
     cursor: pointer;
 
+    &:hover {
+        background-color: var(--color-brand-hover);
+    }
 }
 
 
