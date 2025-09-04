@@ -3,7 +3,6 @@ const li = document.querySelector("li")
 const list = document.querySelector("#list")
 const input = document.querySelector("#input")
 const btn = document.querySelector("#btn")
-const del =document.querySelector(".delete")
 
 form.onsubmit = (event) => {
     event.preventDefault()
@@ -11,9 +10,18 @@ form.onsubmit = (event) => {
     adicionarItem(input.value)
 }
 
-del.onclick = () => {
-    list.removeChild(li)
-    console.log("oi")
+list.onclick = (event) => {
+    if (event.target.closest(".delete")) {
+        const delLi = event.target.closest("li")
+        delLi.remove()
+
+        const errorMensage = document.querySelector(".error-mensage")
+        errorMensage.classList.remove("none")
+
+        setTimeout(() => {
+            errorMensage.classList.add("none");
+        }, 2000)
+    }
 }
 
 function adicionarItem(itemName) {
